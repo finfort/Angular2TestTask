@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script>
+        document.write('<base href="' + document.location + '" />');
+    </script>
+    <title>Angular 2 Tour of Heroes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--<link rel="stylesheet" href="styles.css">-->
+ <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+    <!-- IE required polyfills, in this exact order -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/es6-shim/0.35.0/es6-shim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.24/system-polyfills.js"></script>
+    <script src="https://npmcdn.com/angular2@2.0.0-beta.9/es6/dev/src/testing/shims_for_IE.js"></script>
+
+    <script src="https://code.angularjs.org/2.0.0-beta.9/angular2-polyfills.js"></script>
+    <script src="https://code.angularjs.org/tools/system.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typescript/1.8.7/typescript.min.js"></script>
+    <script src="https://code.angularjs.org/2.0.0-beta.9/Rx.js"></script>
+    <script src="https://code.angularjs.org/2.0.0-beta.9/angular2.dev.js"></script>
+    <script src="https://code.angularjs.org/2.0.0-beta.9/router.dev.js"></script>
+    <script src="/node_modules/angular2-google-maps/bundles/angular2-google-maps.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/2.0.0-beta.9/http.dev.js"></script>
+
+    <script>
+        System.config({
+        transpiler: 'typescript', 
+        typescriptOptions: { emitDecoratorMetadata: true }, 
+        packages: {'app': {defaultExtension: 'js'}} 
+      });
+        System.import('app/main')
+              .then(null, console.error.bind(console));
+    </script>
+</head>
+
+<body>
+    <!-- <my-app> will be our application component -->
+    <my-map>Loading...</my-map>
+</body>
+
+</html>
