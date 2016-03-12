@@ -4,7 +4,6 @@
     <li *ngFor="#hero of heroes"
       [class.selected]="hero === selectedHero"
       (click)="onSelect(hero)">
-      <!--<span class="badge">{{hero.id}}</span> {{hero.last_name}}-->
       <div class="row-fluid">
         <div class="span2" >
 		    <img src="{{hero.image}}" width="50px" height="50px" class="img-circle">
