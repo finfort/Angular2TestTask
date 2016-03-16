@@ -7,8 +7,9 @@ import {HTTP_PROVIDERS}    from 'angular2/http';
 import 'rxjs/Rx';
 import {LocationStrategy, Location, HashLocationStrategy } from 'angular2/router'; 
 import {provide} from 'angular2/core';
+import {enableProdMode} from 'angular2/core';
 
-
+enableProdMode();
 bootstrap(AppComponent, [
     ROUTER_PROVIDERS,
     HeroService,
