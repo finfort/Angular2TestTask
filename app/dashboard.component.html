@@ -1,11 +1,8 @@
 <div class="grid grid-pad">
-    <sebm-google-map [latitude]="lat" [longitude]="lng">
-
-        <sebm-google-map-marker [latitude]="47.8447548" [longitude]="35.1322087" [label]="'M'" [title]="'last_name'" (markerClick)="gotoDetail(8)">
+    <sebm-google-map [latitude]="lat" [longitude]="lng" zoom="2">
+        <p *ngFor="#hero of heroes">
+            <sebm-google-map-marker  *ngIf="hero.lat && hero.lon"  [latitude]="-(-hero.lat)" [longitude]="-(-hero.lon)" [label]="hero.first_name" [title]="'l'" (markerClick)="gotoDetail(hero)">
         </sebm-google-map-marker>
-        <sebm-google-map-marker [latitude]="47.8472116" [longitude]="35.1187066" [label]="'M'" [title]="'last_name'" (markerClick)="gotoDetail(8)">
-        </sebm-google-map-marker>
-        <!--wtf? try to use native gmaps-->
-        <sebm-google-map-marker *ngFor="#hero of heroes" [latitude]="hero.lat" [longitude]="hero.lng" [label]="hero.first_name" (markerClick)="gotoDetail(hero)"></sebm-google-map-marker>
+        </p>
     </sebm-google-map>
 </div>
