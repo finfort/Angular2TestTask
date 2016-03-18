@@ -1,25 +1,26 @@
+<search-box (update)="term = $event"></search-box>
+
 <div>
-  <h2>My Heroes</h2>
-  <ul class="heroes">
-    <li *ngFor="#hero of heroes"
-      [class.selected]="hero === selectedHero"
-      (click)="onSelect(hero)">
-      <div class="row-fluid">
-        <div class="span2" >
-		    <img src="{{hero.image}}" width="50px" height="50px" class="img-circle">
-        </div>
-        
-        <div class="span8">
-            <h3>{{hero.first_name}} {{hero.lst_name}}</h3>
-            <h6>Email: {{hero.email}}</h6>
-            <h6>Country: {{hero.country}}</h6>
-            <h6>City: {{hero.city}}</h6>
-        </div>
-      </div>
-    </li>
-  </ul>
-  <div *ngIf="selectedHero">
-    <h2>{{selectedHero.first_name | uppercase}} is my hero</h2>
-    <button (click)="gotoDetail()">View Details</button>
-  </div>
+
+    <h2>My Heroes</h2>
+    <ul class="heroes">
+        <li *ngFor="#hero of heroes | search: term" [class.selected]="hero === selectedHero" (click)="onSelect(hero)">
+            <div class="row-fluid">
+                <div class="span2">
+                    <img src="{{hero.image}}" width="50px" height="50px" class="img-circle">
+                </div>
+
+                <div class="span8">
+                    <h3>{{hero.first_name}} {{hero.lst_name}}</h3>
+                    <h6>Email: {{hero.email}}</h6>
+                    <h6>Country: {{hero.country}}</h6>
+                    <h6>City: {{hero.city}}</h6>
+                </div>
+            </div>
+        </li>
+    </ul>
+    <div *ngIf="selectedHero">
+        <h2>{{selectedHero.first_name | uppercase}} is my hero</h2>
+        <button (click)="gotoDetail()">View Details</button>
+    </div>
 </div>

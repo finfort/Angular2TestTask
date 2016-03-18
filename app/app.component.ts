@@ -4,6 +4,8 @@ import {RouteConfig, ROUTER_DIRECTIVES} from 'angular2/router';
 import {HeroesComponent} from './heroes.component';
 import {HeroDetailComponent} from './hero-detail.component';
 import {DashboardComponent} from './dashboard.component';
+import {SearchBox} from './searchbox.component';
+
 import {HeroService} from './hero.service';
 import {AuthHttp, tokenNotExpired, JwtHelper} from 'angular2-jwt';
 import {ProfileComponent} from './profile.component'
@@ -17,7 +19,7 @@ declare var Auth0Lock;
 
     styleUrls: ['app/app.component.css'],
 
-    directives: [ROUTER_DIRECTIVES],
+    directives: [ROUTER_DIRECTIVES, SearchBox],
     providers: [HeroService]
 })
 @RouteConfig([
